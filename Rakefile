@@ -9,5 +9,9 @@ namespace :db do
     Student.create_table
   end
   
+  desc 'builds enivornment'
+  task :environment do 
+    require-relative './config/environment'
+  end 
   
 end 
