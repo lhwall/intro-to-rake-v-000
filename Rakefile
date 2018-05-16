@@ -3,10 +3,7 @@ task :hello do
   puts "hello from Rake!"
 end
 
-desc 'drop into the Pry console'
-  task :console => :environment do 
-    Pry.start 
-  end 
+
 
 namespace :db do 
   desc 'migrate changes to your database'
@@ -22,6 +19,11 @@ namespace :db do
   desc 'seed the database with dummy data'
   task :seed do
     require_relative './db/seeds.rb'
+  end 
+  
+  desc 'drop into the Pry console'
+  task :console => :environment do 
+    Pry.start 
   end 
   
 end 
