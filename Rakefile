@@ -11,7 +11,7 @@ namespace :db do
   
   desc 'builds enivornment'
   task :environment do 
-    require-relative './config/environment'
+    require_relative './config/environment'
   end 
   
 end 
